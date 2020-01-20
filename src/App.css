@@ -1,0 +1,14 @@
+.App {
+    padding: 24px 36px;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+    white-space: nowrap;
+}
+
+.popup-content {
+    border: none !important;
+    background: none !important;
+}

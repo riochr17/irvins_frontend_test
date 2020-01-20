@@ -1,0 +1,48 @@
+.general-table {
+
+    overflow-x: auto;
+    background: #FFF;
+    border-radius: 8px;
+    padding: 8px;
+    
+    &--container {
+        display: table;
+        width: 100%;
+    }
+
+    &--group-header, &--group-body {
+        display: table-row-group;
+        &--row {
+            display: table-row;
+            &--col {
+                display: table-cell;
+                border-bottom: solid 1px #EEE;
+                &--cell {
+                    padding: 12px;
+                }
+            }
+        }
+    }
+    &--group-header {
+        &--row {
+            &--col {
+                &--cell {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    &--group-body {
+        &--row {
+            &--col {
+                &--cell {
+                    a {
+                        text-decoration: none;
+                        color: blue;
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+    }
+}
