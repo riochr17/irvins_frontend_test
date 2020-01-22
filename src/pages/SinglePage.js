@@ -57,12 +57,12 @@ export default class SinglePage extends React.Component {
     putProductChanges(name, price) {
         this.setState({is_loading: true});
         putProductChanges({
-            "id": this.state.active_product.id,
+            "id": this.state.active_product._id,
             "name": name,
             "price": price
         }, (result) => {
             this.state.products = this.state.products.map(product => {
-                if (product.id == result.data.id) {
+                if (product._id == result.data._id) {
                     product = result.data;
                 }
 
@@ -82,9 +82,9 @@ export default class SinglePage extends React.Component {
     deleteProduct() {
         this.setState({is_loading: true});
         deleteProduct({
-            "id": this.state.active_product.id
+            "id": this.state.active_product._id
         },(result) => {
-            this.state.products = this.state.products.filter(product => product.id != result.data[0]);
+            this.state.products = this.state.products.filter(product => product._id != result.data[0]);
             this.setState({
                 is_loading: false,
                 products: this.state.products,
